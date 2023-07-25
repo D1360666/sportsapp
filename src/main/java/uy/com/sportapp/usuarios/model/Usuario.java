@@ -1,24 +1,30 @@
 package uy.com.sportapp.usuarios.model;
 
+import jakarta.persistence.*;
+
+
 import java.util.Date;
 
+@Entity
+@Table(name="Usuarios")
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String apellido;
     private int ci;
     private Date fnacimiento;
-
     private String direccion;
     private String telefono;
-
     private String email;
     private String usuario;
+    private String password;
 
     public Usuario() {
     }
 
-    public Usuario(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono, String email, String usuario) {
+    public Usuario(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono, String email, String usuario, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -28,6 +34,7 @@ public class Usuario {
         this.telefono = telefono;
         this.email = email;
         this.usuario = usuario;
+        this.password = password;
     }
 
     public int getId() {
@@ -100,6 +107,14 @@ public class Usuario {
 
     public void setUsuario(String usuario) {
         this.usuario = usuario;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
