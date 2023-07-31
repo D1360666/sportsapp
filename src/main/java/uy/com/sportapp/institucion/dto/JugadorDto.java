@@ -1,35 +1,33 @@
-package uy.com.sportapp.usuarios.dto;
+package uy.com.sportapp.institucion.dto;
 
 import java.util.Date;
 
-public class UsuarioDto {
+public class JugadorDto {
     private int id;
     private String nombre;
     private String apellido;
     private int ci;
     private Date fnacimiento;
-
+    private Date vencimientoCarnet;
     private String direccion;
     private String telefono;
+    private String responsable;
+    private int nroCamiseta;
 
-    private String email;
-    private String usuario;
-
-    private String password;
-    public UsuarioDto() {
+    public JugadorDto() {
     }
 
-    public UsuarioDto(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono, String email, String usuario, String password) {
+    public JugadorDto(int id, String nombre, String apellido, int ci, Date fnacimiento, Date vencimientoCarnet, String direccion, String telefono, String responsable, int nroCamiseta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.ci = ci;
         this.fnacimiento = fnacimiento;
+        this.vencimientoCarnet = vencimientoCarnet;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.email = email;
-        this.usuario = usuario;
-        this.password = password;
+        this.responsable = responsable;
+        this.nroCamiseta = nroCamiseta;
     }
 
     public int getId() {
@@ -72,6 +70,14 @@ public class UsuarioDto {
         this.fnacimiento = fnacimiento;
     }
 
+    public Date getVencimientoCarnet() {
+        return vencimientoCarnet;
+    }
+
+    public void setVencimientoCarnet(Date vencimientoCarnet) {
+        this.vencimientoCarnet = vencimientoCarnet;
+    }
+
     public String getDireccion() {
         return direccion;
     }
@@ -88,42 +94,35 @@ public class UsuarioDto {
         this.telefono = telefono;
     }
 
-    public String getEmail() {
-        return email;
+    public String getResponsable() {
+        return responsable;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setResponsable(String responsable) {
+        this.responsable = responsable;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public int getNroCamiseta() {
+        return nroCamiseta;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setNroCamiseta(int nroCamiseta) {
+        this.nroCamiseta = nroCamiseta;
     }
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "Jugador{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", ci=" + ci +
                 ", fnacimiento=" + fnacimiento +
+                ", vencimientoCarnet=" + vencimientoCarnet +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", email='" + email + '\'' +
-                ", usuario='" + usuario + '\'' +
+                ", responsable='" + responsable + '\'' +
+                ", nroCamiseta=" + nroCamiseta +
                 '}';
     }
 }

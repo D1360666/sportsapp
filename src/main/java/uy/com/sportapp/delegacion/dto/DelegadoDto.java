@@ -1,33 +1,28 @@
-package uy.com.sportapp.institucion.model;
+package uy.com.sportapp.delegacion.dto;
 
 import java.util.Date;
 
-public class Jugador {
+public class DelegadoDto {
     private int id;
     private String nombre;
     private String apellido;
     private int ci;
     private Date fnacimiento;
-    private Date vencimientoCarnet;
+
     private String direccion;
     private String telefono;
-    private String responsable;
-    private int nroCamiseta;
 
-    public Jugador() {
+    public DelegadoDto() {
     }
 
-    public Jugador(int id, String nombre, String apellido, int ci, Date fnacimiento, Date vencimientoCarnet, String direccion, String telefono, String responsable, int nroCamiseta) {
+    public DelegadoDto(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.ci = ci;
         this.fnacimiento = fnacimiento;
-        this.vencimientoCarnet = vencimientoCarnet;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.responsable = responsable;
-        this.nroCamiseta = nroCamiseta;
     }
 
     public int getId() {
@@ -69,15 +64,6 @@ public class Jugador {
     public void setFnacimiento(Date fnacimiento) {
         this.fnacimiento = fnacimiento;
     }
-
-    public Date getVencimientoCarnet() {
-        return vencimientoCarnet;
-    }
-
-    public void setVencimientoCarnet(Date vencimientoCarnet) {
-        this.vencimientoCarnet = vencimientoCarnet;
-    }
-
     public String getDireccion() {
         return direccion;
     }
@@ -93,23 +79,6 @@ public class Jugador {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-    public String getResponsable() {
-        return responsable;
-    }
-
-    public void setResponsable(String responsable) {
-        this.responsable = responsable;
-    }
-
-    public int getNroCamiseta() {
-        return nroCamiseta;
-    }
-
-    public void setNroCamiseta(int nroCamiseta) {
-        this.nroCamiseta = nroCamiseta;
-    }
-
     @Override
     public String toString() {
         return "Jugador{" +
@@ -118,11 +87,8 @@ public class Jugador {
                 ", apellido='" + apellido + '\'' +
                 ", ci=" + ci +
                 ", fnacimiento=" + fnacimiento +
-                ", vencimientoCarnet=" + vencimientoCarnet +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", responsable='" + responsable + '\'' +
-                ", nroCamiseta=" + nroCamiseta +
                 '}';
     }
 }

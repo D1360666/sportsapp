@@ -1,30 +1,21 @@
-package uy.com.sportapp.usuarios.model;
-
-import jakarta.persistence.*;
-
+package uy.com.sportapp.delegacion.model;
 
 import java.util.Date;
 
-@Entity
-@Table(name="Usuarios")
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DelegadoModel {
     private int id;
     private String nombre;
     private String apellido;
     private int ci;
     private Date fnacimiento;
+
     private String direccion;
     private String telefono;
-    private String email;
-    private String usuario;
-    private String password;
 
-    public Usuario() {
+    public DelegadoModel() {
     }
 
-    public Usuario(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono, String email, String usuario, String password) {
+    public DelegadoModel(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -32,9 +23,6 @@ public class Usuario {
         this.fnacimiento = fnacimiento;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.email = email;
-        this.usuario = usuario;
-        this.password = password;
     }
 
     public int getId() {
@@ -76,7 +64,6 @@ public class Usuario {
     public void setFnacimiento(Date fnacimiento) {
         this.fnacimiento = fnacimiento;
     }
-
     public String getDireccion() {
         return direccion;
     }
@@ -92,34 +79,9 @@ public class Usuario {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "Jugador{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
@@ -127,8 +89,6 @@ public class Usuario {
                 ", fnacimiento=" + fnacimiento +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", email='" + email + '\'' +
-                ", usuario='" + usuario + '\'' +
                 '}';
     }
 }
