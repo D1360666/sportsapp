@@ -10,7 +10,7 @@ import uy.com.sportapp.usuarios.dto.UsuarioDto;
 import uy.com.sportapp.usuarios.service.interfaces.IUsuarioService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/usuarios")
 public class UsuarioController {
 
     @Autowired

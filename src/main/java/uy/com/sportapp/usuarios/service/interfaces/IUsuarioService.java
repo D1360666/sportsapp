@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface IUsuarioService {
     public List<UsuarioDto> buscarUsuarios();
-
     public UsuarioDto login(String usuario, String password);
     public UsuarioDto buscarUsuarioPorId(Integer id);
     public UsuarioDto guardarUsuario(UsuarioDto usuarioDto);
