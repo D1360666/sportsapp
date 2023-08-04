@@ -1,7 +1,14 @@
 package uy.com.sportapp.institucion.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ResponsableDto {
     private int id;
     private String nombre;
@@ -10,6 +17,4 @@ public class ResponsableDto {
     private Date fnacimiento;
     private String direccion;
     private String telefono;
-
-
 }
