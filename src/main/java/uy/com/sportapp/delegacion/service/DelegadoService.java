@@ -6,20 +6,15 @@ import uy.com.sportapp.delegacion.model.DelegadoModel;
 import uy.com.sportapp.delegacion.repository.DelegadoRepository;
 import uy.com.sportapp.delegacion.service.interfaces.iDelegadoService;
 import uy.com.sportapp.delegacion.utils.DelegadoMapper;
-import uy.com.sportapp.institucion.model.ResponsableModel;
-import uy.com.sportapp.institucion.utils.ResponsableMapper;
-
 import java.util.ArrayList;
 
 public class DelegadoService implements iDelegadoService {
     @Autowired
     private DelegadoRepository repo;
-
     @Override
     public DelegadoDto saveDelegado(DelegadoDto delegadoDto) {
         return DelegadoMapper.delegadoToDelegadoDto(repo.save(DelegadoMapper.delegadoDtoToDelegado(delegadoDto)));
     }
-
     @Override
     public DelegadoDto updateDelegado(DelegadoDto delegadoDto) {
         DelegadoDto d = this.findById(delegadoDto.getId());
@@ -32,12 +27,10 @@ public class DelegadoService implements iDelegadoService {
 
         return this.saveDelegado(d);
     }
-
     @Override
     public DelegadoDto findById(Integer id) {
         return DelegadoMapper.delegadoOptToDelegadoDto(repo.findById(id));
     }
-
     @Override
     public ArrayList<DelegadoDto> findAll() {
         ArrayList<DelegadoModel> lista = new ArrayList<>(repo.findAll());

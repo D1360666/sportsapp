@@ -5,8 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uy.com.sportapp.institucion.dto.CargoDto;
 import uy.com.sportapp.institucion.service.interfaces.iCargoService;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

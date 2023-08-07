@@ -6,7 +6,6 @@ import uy.com.sportapp.institucion.dto.ResponsableDto;
 import uy.com.sportapp.institucion.model.ResponsableModel;
 import uy.com.sportapp.institucion.repository.ResponsableRepository;
 import uy.com.sportapp.institucion.service.interfaces.iResponsableService;
-import uy.com.sportapp.institucion.utils.JugadorMapper;
 import uy.com.sportapp.institucion.utils.ResponsableMapper;
 
 import java.util.ArrayList;

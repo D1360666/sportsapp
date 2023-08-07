@@ -5,11 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uy.com.sportapp.delegacion.dto.DelegadoDto;
 import uy.com.sportapp.delegacion.service.interfaces.iDelegadoService;
-import uy.com.sportapp.institucion.dto.ResponsableDto;
-import uy.com.sportapp.institucion.service.interfaces.iResponsableService;
-
 import java.util.List;
-
 @RestController
 @RequestMapping("/delegado")
 public class DelegadoController {

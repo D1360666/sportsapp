@@ -1,6 +1,5 @@
 package uy.com.sportapp.institucion.service;
 
-import com.fasterxml.jackson.databind.ser.std.AsArraySerializerBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uy.com.sportapp.institucion.dto.CargoDto;
@@ -8,11 +7,7 @@ import uy.com.sportapp.institucion.model.CargoModel;
 import uy.com.sportapp.institucion.repository.CargoRepository;
 import uy.com.sportapp.institucion.service.interfaces.iCargoService;
 import uy.com.sportapp.institucion.utils.CargoMapper;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-
 
 @Service
 public class CargoService implements iCargoService {
