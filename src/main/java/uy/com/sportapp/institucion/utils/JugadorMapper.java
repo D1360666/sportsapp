@@ -10,6 +10,7 @@ import uy.com.sportapp.institucion.model.JugadorModel;
 import uy.com.sportapp.usuarios.dto.UsuarioDto;
 import uy.com.sportapp.usuarios.model.UsuarioModel;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -37,5 +38,11 @@ public class JugadorMapper {
         BeanUtils.copyProperties(lstJugadorModel, lista);
         return lista;
     }
+
+    /*public static Optional<JugadorDto> jugadorDtoToJugadorOpt(JugadorDto jugadorDto){
+        Optional<JugadorDto> jugadorOpt= ;
+        BeanUtils.copyProperties(jugadorDto, jugadorOpt);
+        return jugadorOpt;
+    }*/
 
 }

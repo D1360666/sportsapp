@@ -3,9 +3,7 @@ package uy.com.sportapp.delegacion.utils;
 import org.springframework.beans.BeanUtils;
 import uy.com.sportapp.delegacion.dto.DelegadoDto;
 import uy.com.sportapp.delegacion.model.DelegadoModel;
-import uy.com.sportapp.usuarios.dto.UsuarioDto;
-import uy.com.sportapp.usuarios.model.UsuarioModel;
-
+import java.util.ArrayList;
 import java.util.Optional;
 
 public class DelegadoMapper {
@@ -26,5 +24,9 @@ public class DelegadoMapper {
         BeanUtils.copyProperties(optionalDelegado, delegadoDto);
         return delegadoDto;
     }
-
+    public static ArrayList<DelegadoDto> lstDelegadoModelToDelegadoDto(ArrayList<DelegadoModel> lstDelegadoModel) {
+        ArrayList<DelegadoDto> lista = new ArrayList<DelegadoDto>();
+        BeanUtils.copyProperties(lstDelegadoModel, lista);
+        return lista;
+    }
 }
