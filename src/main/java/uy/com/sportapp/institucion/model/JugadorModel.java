@@ -26,7 +26,8 @@ public class JugadorModel {
     private Date vencimientoCarnet;
     private String direccion;
     private String telefono;
-    private String responsable;
+    @OneToOne
+    private ResponsableModel responsable;
     private int nroCamiseta;
 
     @Override

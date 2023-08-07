@@ -19,7 +19,7 @@ public class JugadorDto {
     private Date vencimientoCarnet;
     private String direccion;
     private String telefono;
-    private String responsable;
+    private ResponsableDto responsable;
     private int nroCamiseta;
 
 
