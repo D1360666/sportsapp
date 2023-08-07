@@ -1,5 +1,6 @@
 package uy.com.sportapp.institucion.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,9 @@ public class JugadorModel {
     private String nombre;
     private String apellido;
     private int ci;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date fnacimiento;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date vencimientoCarnet;
     private String direccion;
     private String telefono;

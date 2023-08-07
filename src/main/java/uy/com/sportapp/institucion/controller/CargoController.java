@@ -14,16 +14,16 @@ import java.util.List;
 public class CargoController {
 
     @Autowired
-    private iCargoService iCargoService;
+    private iCargoService iService;
 
     @GetMapping
     public ResponseEntity<List<CargoDto>> getCargos(){
-        return ResponseEntity.ok().body(iCargoService.findAll());
+        return ResponseEntity.ok().body(iService.findAll());
     }
 
     @PostMapping
     public ResponseEntity<CargoDto> saveCargo(@RequestBody CargoDto cargoDto){
-        return ResponseEntity.ok().body(iCargoService.saveCargo(cargoDto));
+        return ResponseEntity.ok().body(iService.saveCargo(cargoDto));
     }
 
 }

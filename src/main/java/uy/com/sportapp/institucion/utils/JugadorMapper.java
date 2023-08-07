@@ -1,13 +1,16 @@
 package uy.com.sportapp.institucion.utils;
 
 import org.springframework.beans.BeanUtils;
+import uy.com.sportapp.institucion.dto.CargoDto;
 import uy.com.sportapp.institucion.dto.InstitucionDto;
 import uy.com.sportapp.institucion.dto.JugadorDto;
+import uy.com.sportapp.institucion.model.CargoModel;
 import uy.com.sportapp.institucion.model.InstitucionModel;
 import uy.com.sportapp.institucion.model.JugadorModel;
 import uy.com.sportapp.usuarios.dto.UsuarioDto;
 import uy.com.sportapp.usuarios.model.UsuarioModel;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 public class JugadorMapper {
@@ -28,4 +31,11 @@ public class JugadorMapper {
         BeanUtils.copyProperties(optionalJugador, jugadorDto);
         return jugadorDto;
     }
+
+    public static ArrayList<JugadorDto> lstJugadorModelToJugadorDto(ArrayList<JugadorModel> lstJugadorModel) {
+        ArrayList<JugadorDto> lista = new ArrayList<JugadorDto>();
+        BeanUtils.copyProperties(lstJugadorModel, lista);
+        return lista;
+    }
+
 }

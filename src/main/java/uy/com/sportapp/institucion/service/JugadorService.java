@@ -3,8 +3,11 @@ package uy.com.sportapp.institucion.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uy.com.sportapp.institucion.dto.JugadorDto;
+import uy.com.sportapp.institucion.model.CargoModel;
+import uy.com.sportapp.institucion.model.JugadorModel;
 import uy.com.sportapp.institucion.repository.JugadorRepository;
 import uy.com.sportapp.institucion.service.interfaces.iJugadorService;
+import uy.com.sportapp.institucion.utils.CargoMapper;
 import uy.com.sportapp.institucion.utils.JugadorMapper;
 
 import java.util.ArrayList;
@@ -44,6 +47,7 @@ public class JugadorService implements iJugadorService {
 
     @Override
     public ArrayList<JugadorDto> findAll() {
-        return null;
+        ArrayList<JugadorModel> lista = new ArrayList<>(repo.findAll());
+        return JugadorMapper.lstJugadorModelToJugadorDto(lista);
     }
 }
