@@ -1,21 +1,19 @@
 package uy.com.sportapp.tesoreria.model;
 
-import uy.com.sportapp.tesoreria.dto.TesoreroDto;
-
-public class Tesoreria {
+public class TesoreriaModel {
     private int id;
     private String nombre;
     private Double saldo;
-    private Tesorero tesorero;
+    private TesoreroModel tesoreroModel;
 
-    public Tesoreria() {
+    public TesoreriaModel() {
     }
 
-    public Tesoreria(int id, String nombre, Double saldo, Tesorero tesorero) {
+    public TesoreriaModel(int id, String nombre, Double saldo, TesoreroModel tesoreroModel) {
         this.id = id;
         this.nombre = nombre;
         this.saldo = saldo;
-        this.tesorero = tesorero;
+        this.tesoreroModel = tesoreroModel;
     }
 
     public int getId() {
@@ -42,12 +40,12 @@ public class Tesoreria {
         this.saldo = saldo;
     }
 
-    public Tesorero getTesorero() {
-        return tesorero;
+    public TesoreroModel getTesorero() {
+        return tesoreroModel;
     }
 
-    public void setTesoreroDto(Tesorero tesorero) {
-        this.tesorero = tesorero;
+    public void setTesoreroDto(TesoreroModel tesoreroModel) {
+        this.tesoreroModel = tesoreroModel;
     }
 
     @Override
@@ -56,7 +54,7 @@ public class Tesoreria {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", saldo=" + saldo +
-                ", tesoreroDto=" + tesorero +
+                ", tesoreroDto=" + tesoreroModel +
                 '}';
     }
 }

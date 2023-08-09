@@ -2,7 +2,7 @@ package uy.com.sportapp.tesoreria.model;
 
 import java.util.Date;
 
-public class Tesorero {
+public class TesoreroModel {
     private int id;
     private String nombre;
     private String apellido;
@@ -12,10 +12,10 @@ public class Tesorero {
     private String direccion;
     private String telefono;
 
-    public Tesorero() {
+    public TesoreroModel() {
     }
 
-    public Tesorero(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono) {
+    public TesoreroModel(int id, String nombre, String apellido, int ci, Date fnacimiento, String direccion, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;

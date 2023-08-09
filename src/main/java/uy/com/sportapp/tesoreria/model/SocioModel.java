@@ -1,21 +1,23 @@
-package uy.com.sportapp.tesoreria.dto;
+package uy.com.sportapp.tesoreria.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class TesoreroDto {
+@NoArgsConstructor
+@Entity
+@Table(name = "Socios")
+public class SocioModel {
     private int id;
     private String nombre;
     private String apellido;
     private int ci;
-    private Date fnacimiento;
     private String direccion;
     private String telefono;
+    private Double saldo;
 
 }
