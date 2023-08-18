@@ -3,10 +3,12 @@ package uy.com.sportapp.tesoreria.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uy.com.sportapp.tesoreria.dto.SocioDto;
+import uy.com.sportapp.tesoreria.model.SocioModel;
 import uy.com.sportapp.tesoreria.repository.SocioRepository;
 import uy.com.sportapp.tesoreria.service.interfaces.iSocioService;
 import uy.com.sportapp.tesoreria.utils.SocioMapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,11 +36,13 @@ public class SocioService implements iSocioService {
 
     @Override
     public SocioDto findById(Integer id) {
-        return null;
+
+        return SocioMapper.socioOptToSocioDto(repo.findById(id));
     }
 
     @Override
-    public List<SocioDto> findAll() {
-        return null;
+    public ArrayList<SocioDto> findAll() {
+        ArrayList<SocioModel> lista = new ArrayList<>(repo.findAll());
+        return SocioMapper.lstSocioModelToSocioDto(lista);
     }
 }
