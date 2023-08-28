@@ -12,6 +12,5 @@ public class TesoreriaDto {
     private int id;
     private String nombre;
     private Double saldo;
-    @OneToOne
     private TesoreroDto tesoreroDto;
 }

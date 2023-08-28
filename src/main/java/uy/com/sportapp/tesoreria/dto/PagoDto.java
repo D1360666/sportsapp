@@ -12,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class PagoDto {
     private Integer id;
-    private SocioModel socio;
+    private SocioDto socio;
     private Double importe;
     private String razon;
     private Date fecha;
