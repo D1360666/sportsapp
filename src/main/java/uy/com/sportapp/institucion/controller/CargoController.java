@@ -8,7 +8,7 @@ import uy.com.sportapp.institucion.service.interfaces.iCargoService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/cargo")
+@RequestMapping("/sportapi/cargo")
 public class CargoController {
 
     @Autowired

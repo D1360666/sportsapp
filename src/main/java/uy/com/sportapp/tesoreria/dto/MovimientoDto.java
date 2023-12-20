@@ -11,11 +11,11 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MovimientoDto {
-    private int id;
+    private Integer id;
     private String razon;
     private Date fecha;
     private Double importe;
     private String tipo;
-    private int referencia;
+    private Integer referencia;
     private TesoreriaModel tesoreriaModel;
 }

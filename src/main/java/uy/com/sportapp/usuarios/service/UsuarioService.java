@@ -21,7 +21,7 @@ public class UsuarioService implements IUsuarioService {
     private UsuarioRepository repo;
 
     @Override
-    public List<UsuarioDto> buscarUsuarios() {
+    public List<UsuarioDto> findAll() {
         List<UsuarioDto> listaUsuarioDto=new ArrayList<UsuarioDto>();
         return repo.findAll().stream().map(u -> {
             listaUsuarioDto.add(UsuarioMapper.usuarioToUsuarioDto(u));
@@ -42,16 +42,21 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public UsuarioDto buscarUsuarioPorId(Integer id) {
+    public UsuarioDto findById(Integer id) {
         Optional<UsuarioModel> optionalUsuario= repo.findById(id);
         return UsuarioMapper.usuarioOptToUsuarioDto(optionalUsuario);
     }
 
     @Override
-    public UsuarioDto guardarUsuario(UsuarioDto usuarioDto) {
+    public UsuarioDto saveUsuario(UsuarioDto usuarioDto) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String contrasenaActual = usuarioDto.getPassword();
         usuarioDto.setPassword(passwordEncoder.encode((contrasenaActual)));
         return UsuarioMapper.usuarioToUsuarioDto(repo.save(UsuarioMapper.usuarioDtoToUsuario(usuarioDto)));
+    }
+
+    @Override
+    public UsuarioDto updateUsuario(UsuarioDto usuarioDto) {
+        return null;
     }
 }

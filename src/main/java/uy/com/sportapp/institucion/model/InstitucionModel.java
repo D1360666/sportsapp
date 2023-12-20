@@ -22,7 +22,7 @@ public class InstitucionModel {
     private String direccion;
     private String telefono;
     private String email;
-    private int rut;
+    private Integer rut;
 
     @OneToMany
     private List<UsuarioModel> usuarios;

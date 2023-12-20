@@ -1,13 +1,16 @@
 package uy.com.sportapp.delegacion.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import uy.com.sportapp.delegacion.dto.DelegadoDto;
 import uy.com.sportapp.delegacion.model.DelegadoModel;
 import uy.com.sportapp.delegacion.repository.DelegadoRepository;
 import uy.com.sportapp.delegacion.service.interfaces.iDelegadoService;
 import uy.com.sportapp.delegacion.utils.DelegadoMapper;
 import java.util.ArrayList;
+import java.util.List;
 
+@Service
 public class DelegadoService implements iDelegadoService {
     @Autowired
     private DelegadoRepository repo;
@@ -32,7 +35,7 @@ public class DelegadoService implements iDelegadoService {
         return DelegadoMapper.delegadoOptToDelegadoDto(repo.findById(id));
     }
     @Override
-    public ArrayList<DelegadoDto> findAll() {
+    public List<DelegadoDto> findAll() {
         ArrayList<DelegadoModel> lista = new ArrayList<>(repo.findAll());
         return DelegadoMapper.lstDelegadoModelToDelegadoDto(lista);
     }

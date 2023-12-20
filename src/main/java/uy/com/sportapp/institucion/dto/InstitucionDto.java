@@ -15,7 +15,7 @@ public class InstitucionDto {
     private String direccion;
     private String telefono;
     private String email;
-    private int rut;
+    private Integer rut;
 
     private List<UsuarioDto> usuarios;
     private InstitucionDto dependiente;

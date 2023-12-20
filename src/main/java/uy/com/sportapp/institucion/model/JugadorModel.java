@@ -16,10 +16,10 @@ import java.util.Date;
 public class JugadorModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
-    private int ci;
+    private Integer ci;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date fnacimiento;
     @JsonFormat(pattern = "yyyy-MM-dd")

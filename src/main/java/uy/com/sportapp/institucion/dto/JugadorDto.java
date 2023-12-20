@@ -11,16 +11,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class JugadorDto {
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
-    private int ci;
+    private Integer ci;
     private Date fnacimiento;
     private Date vencimientoCarnet;
     private String direccion;
     private String telefono;
     private ResponsableDto responsable;
-    private int nroCamiseta;
+    private Integer nroCamiseta;
 
 
     @Override

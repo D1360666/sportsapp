@@ -17,7 +17,7 @@ public class DelegadoModel {
     private Integer id;
     private String nombre;
     private String apellido;
-    private int ci;
+    private Integer ci;
     private Date fnacimiento;
     private String direccion;
     private String telefono;

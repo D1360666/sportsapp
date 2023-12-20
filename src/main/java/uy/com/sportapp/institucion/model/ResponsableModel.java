@@ -16,11 +16,11 @@ import java.util.Date;
 public class ResponsableModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
-    private int ci;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Integer ci;
+    //@JsonFormat(pattern = "yyyy-MM-dd")
     private Date fnacimiento;
     private String direccion;
     private String telefono;

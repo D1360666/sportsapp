@@ -11,7 +11,7 @@ import uy.com.sportapp.institucion.service.interfaces.iResponsableService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/responsable")
+@RequestMapping("/sportapi/responsable")
 public class ResponsableController {
     @Autowired
     private iResponsableService iService;

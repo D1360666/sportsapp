@@ -10,7 +10,7 @@ import uy.com.sportapp.institucion.service.interfaces.iJugadorService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/jugador")
+@RequestMapping("/sportapi/jugador")
 public class JugadorController {
     @Autowired
     private iJugadorService iService;

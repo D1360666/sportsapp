@@ -6,9 +6,10 @@ import uy.com.sportapp.usuarios.dto.UsuarioDto;
 import java.util.List;
 
 public interface IUsuarioService {
-    public List<UsuarioDto> buscarUsuarios();
+    public List<UsuarioDto> findAll();
     public UsuarioDto login(String usuario, String password);
-    public UsuarioDto buscarUsuarioPorId(Integer id);
-    public UsuarioDto guardarUsuario(UsuarioDto usuarioDto);
+    public UsuarioDto findById(Integer id);
+    public UsuarioDto saveUsuario(UsuarioDto usuarioDto);
+    public UsuarioDto updateUsuario(UsuarioDto usuarioDto);
 
 }

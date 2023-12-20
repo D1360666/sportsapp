@@ -9,7 +9,7 @@ import uy.com.sportapp.institucion.service.interfaces.iInstitucionService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/institucion")
+@RequestMapping("/sportapi/institucion")
 public class InstitucionController {
     @Autowired
     private iInstitucionService iService;

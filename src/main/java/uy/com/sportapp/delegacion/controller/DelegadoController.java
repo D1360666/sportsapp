@@ -7,7 +7,7 @@ import uy.com.sportapp.delegacion.dto.DelegadoDto;
 import uy.com.sportapp.delegacion.service.interfaces.iDelegadoService;
 import java.util.List;
 @RestController
-@RequestMapping("/delegado")
+@RequestMapping("/sportapi/delegado")
 public class DelegadoController {
     @Autowired
     private iDelegadoService iService;
